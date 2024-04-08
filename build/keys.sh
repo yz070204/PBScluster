@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "PASTE YOUR SSH PUBLIC KEY HERE" > ~/.ssh/id_rsa.pub
+echo "Paste  public key contents here" > ~/.ssh/id_rsa.pub
 
 chmod 644 ~/.ssh/id_rsa.pub
 
 echo "-----BEGIN RSA PRIVATE KEY-----
-PASTE THE PRIVATE KEY HERE
+Paste private key contents here
 -----END RSA PRIVATE KEY-----" > ~/.ssh/id_rsa
 
 chmod 600 ~/.ssh/id_rsa
@@ -15,4 +15,4 @@ Host *
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
     LogLevel ERROR
-
+EOF

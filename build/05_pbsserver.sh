@@ -28,9 +28,10 @@ sudo chmod 4755 /opt/pbs/sbin/pbs_iff /opt/pbs/sbin/pbs_rcp
 sudo /etc/init.d/pbs start
 . /etc/profile.d/pbs.sh
 
-sudo /opt/pbs/bin/qmgr
-s server managers += hpcadmin@*
+sudo /opt/pbs/bin/qmgr<<EOF
+s server managers += azureuser@*
 q
+EOF
 
 /opt/pbs/bin/qmgr -c 's s flatuid=t'
 /opt/pbs/bin/qmgr -c 's s job_history_enable=t'
